@@ -51,7 +51,7 @@ export class DynamoQueries {
                     result.error = err;
                     resolve(result);
                 } else {
-                    console.log(`Opponents: ${data.Items.length}`);
+                    // console.log(`Opponents: ${data.Items.length}`);
                     data.Items.forEach((o) => {
 
                         opponents$.push(new Promise<IQueryResult>((res, rej) => {
@@ -80,7 +80,7 @@ export class DynamoQueries {
                             });
                         }));
                     });
-                    console.log(`Opponents$: ${opponents$.length}`);
+                    // console.log(`Opponents$: ${opponents$.length}`);
                     Promise.all(opponents$).then((opponents) => {
                         // console.log(`opopponents: ${JSON.stringify(opponents, null, 2)}`);
 
