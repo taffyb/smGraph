@@ -92,12 +92,3 @@ export class DynamoQueries {
         });
     }
 }
-
-
-/*
-
-
-opponents$.push(new Promise<IQueryResult>((res, rej) => {
-const r = new QueryResult();
-
-*/
